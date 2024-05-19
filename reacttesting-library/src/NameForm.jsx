@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 
 function NameForm({onSubmit}) {
-    const {name, setName} = useState("")
+    const [name, setName] = useState("")
     function handleSubmit(e){
         e.preventDefault()
 
