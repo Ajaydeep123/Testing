@@ -1,5 +1,7 @@
 import {describe, it, vi, expect} from "vitest"
-import { StateForm as Form } from "./StateForm.jsx"
+// import { StateForm as Form } from "./StateForm.jsx"
+import { RefForm as Form } from "./RefForm.jsx"
+
 import { render, screen } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 
@@ -35,7 +37,7 @@ describe("Form Component", ()=>{
         await user.click(screen.getByText("Submit"));
 
         // Debugging
-        await screen.debug(); // Shows the current state of the DOM
+        // await screen.debug(); // Shows the current state of the DOM
 
         
         expect(screen.getByTestId("email-error-msg")).toBeInTheDocument();
