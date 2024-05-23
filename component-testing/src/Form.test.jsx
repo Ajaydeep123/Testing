@@ -79,8 +79,8 @@ describe("Form Component", ()=>{
 
         expect(passwordErrorMsg).toBeInTheDocument();
         expect(onSubmitMock).not.toHaveBeenCalled();
-
-        await user.type(passwordInput,"Password123")
+        await user.clear(passwordInput)
+        await user.type(passwordInput,"Password1234")
         expect(passwordErrorMsg).not.toBeInTheDocument()     
     });
 
