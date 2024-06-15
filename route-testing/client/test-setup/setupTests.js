@@ -17,3 +17,8 @@ afterEach(()=>{
 afterAll(()=>{
     mockServer.close()
 })
+
+// jsdom doesnot support all browser functions, so it'll give error due to the use of scrollTo property that we used
+
+// To resolve that we define a cutom property with same name and returns nothing, as we want to test our page not its scroll behavior
+Object.defineProperty(window, "scrollTo", { value: () => {} })
